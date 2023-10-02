@@ -1,0 +1,13 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+I chose Flask as the web framework because I have worked with it in the past, and I am familiar with it. It is very easy to use. Similarly, I chose Python because I have created REST APIs in Python before. I used the datetime package to make it easier to compare timestamps.
+
+
+2. What are the advantages and disadvantages of your solution?
+The main advantage of this implementation is its high optimization. For the /add endpoint, the worst-case time complexity is O(n) since we need to insert the transaction into the sorted array of date strings. The /balance endpoint has an O(1) time complexity. The /spend endpoint has a worst-case time complexity of O(n). Since we are sorting the transactions as we receive them, this reduces the amount of work needed in the /spend endpoint. 
+
+One disadvantage could be the memory utilization, as I am using two dictionaries and a list. Another disadvantage could be the sorting process as we receive transactions. It might be more optimal to sort the transactions whenever the /spend endpoint is called and add a flag so that it will not sort the date strings if they are already sorted.
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+My favorite project has been the one I was involved in at my research lab, called the Autonomy Research Testbed. This project involved creating a software framework and a hardware platform used in tandem for designing and analyzing robot autonomy algorithms in both simulation and reality. The software was containerized using Docker to ensure OS independence. The project also entailed developing an autonomy stack using ROS2 to validate the performance and validity of the infrastructure. The primary objective of this project was to identify and reduce the simulation-to-reality gap.
+
+This project was challenging as it was my first time working with Docker. However, I quickly overcame the steep learning curve by starting with the basics and doing some tutorials. Soon, I was able to enjoy the benefits of Docker, such as having a consistent environment across platforms, which enabled fast development.
